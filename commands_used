@@ -1,0 +1,13 @@
+References
+https://springbootdev.com/2017/11/30/docker-spring-boot-and-spring-data-jpa-mysql-rest-api-example-with-docker-without-docker-compose/
+https://stackoverflow.com/questions/49019652/not-able-to-connect-to-mysql-docker-from-local
+
+docker run -d \
+     -p 2012:3306 \
+     --name rgmysqlcont \
+     -e MYSQL_ROOT_PASSWORD=root123 \
+     -e MYSQL_DATABASE=spring_app_db \
+     -e MYSQL_USER=app_user \
+     -e MYSQL_PASSWORD=test123 \
+     mysql:latest --default-authentication-plugin=mysql_native_password
+     
